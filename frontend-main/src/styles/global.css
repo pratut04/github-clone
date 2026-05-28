@@ -1,0 +1,32 @@
+body {
+  background: var(--bg-primary);
+
+  color: white;
+}
+
+.container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+.section-title {
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--bg-secondary);
+
+  border: 1px solid
+    var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 20px;
+}

@@ -1,0 +1,208 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 64px;
+
+    background: #0d1117;
+
+    border-bottom:
+        1px solid #30363d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.nav-left {
+
+    display: flex;
+
+    align-items: center;
+}
+
+.nav-left a {
+
+    text-decoration: none;
+}
+
+.nav-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+}
+
+.nav-logo img {
+
+    width: 34px;
+
+    height: 34px;
+}
+
+.nav-logo h3 {
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+/* =========================
+   CENTER
+========================= */
+
+.nav-center {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 0 40px;
+}
+
+.nav-center input {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    height: 42px;
+
+    background: #161b22;
+
+    border: 1px solid #30363d;
+
+    border-radius: 10px;
+
+    padding: 0 16px;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.nav-center input:focus {
+
+    border-color: #2f81f7;
+
+    box-shadow:
+        0 0 0 3px rgba(47,129,247,0.2);
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.create-btn,
+.profile-btn {
+
+    height: 40px;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid #30363d;
+
+    background: #161b22;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.create-btn {
+
+    background: #238636;
+
+    border: none;
+}
+
+.create-btn:hover {
+
+    background: #2ea043;
+
+    transform: translateY(-1px);
+}
+
+.profile-btn:hover {
+
+    background: #21262d;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    color: #f0f6fc;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-right: 30px;
+}
+
+.nav-links span {
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.nav-links span:hover {
+
+    color: #58a6ff;
+}

@@ -1,0 +1,42 @@
+@media screen and (max-width: 1200px) {
+
+  .dashboard-container,
+  .profile-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .dashboard-container,
+  .profile-container,
+  .main-layout {
+    padding: 20px;
+  }
+
+  .repo-grid,
+  .profile-repositories {
+    grid-template-columns: 1fr;
+  }
+
+  .top-navbar {
+    padding: 0 20px;
+  }
+
+  .top-navbar-center input {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .top-navbar-right {
+    gap: 12px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}

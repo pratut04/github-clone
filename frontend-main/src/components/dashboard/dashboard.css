@@ -1,0 +1,161 @@
+.dashboard-container {
+  display: grid;
+
+  grid-template-columns:
+    260px
+    1fr
+    260px;
+
+  gap: 24px;
+
+  padding: 24px 40px;
+
+  min-height: calc(100vh - 70px);
+}
+
+.dashboard-sidebar,
+.dashboard-main {
+
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 24px;
+}
+
+.dashboard-sidebar h3 {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+}
+
+.sidebar-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.suggested-card {
+  padding: 16px;
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 12px;
+
+  background: var(--bg-primary);
+
+  transition: var(--transition);
+}
+
+.suggested-card:hover {
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
+}
+
+.suggested-card h4 {
+  margin-bottom: 8px;
+}
+
+.suggested-card p {
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+.dashboard-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  font-size: 30px;
+}
+
+.dashboard-header input {
+  width: 320px;
+
+  padding: 12px;
+
+  background: var(--bg-primary);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 10px;
+
+  color: white;
+}
+
+.repo-grid {
+  display: grid;
+
+  gap: 20px;
+}
+
+.event-card {
+  background: var(--bg-primary);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 12px;
+
+  padding: 16px;
+
+  margin-bottom: 16px;
+}
+
+.event-card p {
+  margin-bottom: 8px;
+}
+
+.event-card span {
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+.empty-state {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 300px;
+
+  border: 1px dashed
+    var(--border-color);
+
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .dashboard-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .dashboard-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+  }
+
+  .dashboard-header input {
+    width: 100%;
+  }
+}
