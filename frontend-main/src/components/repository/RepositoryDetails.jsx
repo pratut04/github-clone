@@ -1345,13 +1345,13 @@ const RepositoryDetails = () => {
 
             <div className="github-rightbar">
 
-              <h3>
-                About
-              </h3>
+              <h3>About</h3>
 
-              <p>
-                {repository.description}
+              <p className="repo-description">
+                {repository.description ||
+                  "No description provided"}
               </p>
+
               {!isOwner && (
 
                 <button
@@ -1368,20 +1368,35 @@ const RepositoryDetails = () => {
 
               )}
 
-              <div className="repo-stats">
+              <div className="about-divider"></div>
 
-                ⭐ {starCount} Stars
-
+              <div className="about-item">
+                👥 Followers
+                <span>{followerCount}</span>
               </div>
 
-              <div className="repo-stats">
+              <div className="about-item">
+                ⭐ Stars
+                <span>{starCount}</span>
+              </div>
 
-                🍴 Fork ({repository.forkCount || 0})
+              <div className="about-item">
+                🍴 Forks
+                <span>
+                  {repository.forkCount || 0}
+                </span>
+              </div>
 
+              <div className="about-item">
+                🕒 Updated
+                <span>
+                  {new Date(
+                    repository.updatedAt
+                  ).toLocaleDateString()}
+                </span>
               </div>
 
             </div>
-
           </div>
 
         )}

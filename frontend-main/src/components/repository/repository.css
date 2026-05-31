@@ -2674,3 +2674,70 @@
   font-size: 14px;
   margin-top: 6px;
 }
+
+.github-rightbar {
+  background: linear-gradient(
+    180deg,
+    rgba(17,24,39,0.95),
+    rgba(13,17,23,0.95)
+  );
+
+  border: 1px solid #30363d;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+.github-rightbar h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.repo-description {
+  color: #c9d1d9;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.about-divider {
+  height: 1px;
+  background: #30363d;
+  margin: 20px 0;
+}
+
+.about-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0;
+
+  color: #c9d1d9;
+
+  border-bottom: 1px solid #21262d;
+
+  font-size: 15px;
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+
+.about-item span {
+  color: white;
+  font-weight: 600;
+}
+
+.follow-btn {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
