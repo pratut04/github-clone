@@ -1363,7 +1363,7 @@ const RepositoryDetails = () => {
                     : "Follow"}
 
                   {" "}
-                  ({followerCount})
+                 
                 </button>
 
               )}
@@ -1372,7 +1372,7 @@ const RepositoryDetails = () => {
 
               <div className="about-item">
                 👥 Followers
-                
+                <span>{followerCount}</span>
               </div>
 
               <div className="about-item">
