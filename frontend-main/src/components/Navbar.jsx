@@ -12,35 +12,35 @@ import logo
 const Navbar = () => {
   const [notificationCount, setNotificationCount] =
     useState(0);
-  
+
   useEffect(() => {
-  
+
     const loadCount = async () => {
-  
+
       try {
-  
+
         const userId =
           localStorage.getItem("userId");
-  
+
         if (!userId) return;
-  
+
         const notifications =
           await fetchNotifications(userId);
-  
+
         setNotificationCount(
           notifications.length
         );
-  
+
       } catch (err) {
-  
+
         console.error(err);
-  
+
       }
-  
+
     };
-  
+
     loadCount();
-  
+
   }, []);
   return (
     <nav className="navbar">
@@ -132,8 +132,14 @@ const Navbar = () => {
               "username"
             );
 
-            window.location.href =
-              "/auth";
+            localStorage.removeItem(
+              "token"
+            );
+
+            window.location.replace(
+              "/auth"
+            );
+
           }}
         >
           Logout
