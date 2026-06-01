@@ -1499,7 +1499,7 @@ async function forkRepository(
     new Repository({
 
       name:
-        originalRepo.name,
+        `${originalRepo.name}-fork`,
 
       description:
         originalRepo.description,
