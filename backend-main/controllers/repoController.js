@@ -1498,7 +1498,8 @@ async function forkRepository(
 
     new Repository({
 
-      name: `${originalRepo.name}-fork-${Date.now()}`,
+      name:
+        originalRepo.name,
 
       description:
         originalRepo.description,
