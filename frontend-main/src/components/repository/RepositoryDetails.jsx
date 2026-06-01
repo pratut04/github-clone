@@ -1352,7 +1352,7 @@ const RepositoryDetails = () => {
                   "No description provided"}
               </p>
 
-              {!isOwner && (
+              {/* {!isOwner && (
 
                 <button
                   className="follow-btn"
@@ -1366,7 +1366,7 @@ const RepositoryDetails = () => {
                  
                 </button>
 
-              )}
+              )} */}
 
               <div className="about-divider"></div>
 
