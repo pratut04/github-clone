@@ -1444,12 +1444,14 @@ const RepositoryDetails = () => {
 
             {showIssueForm && (
 
-              <CreateIssueModal
-                repoId={id}
-                onCreated={
-                  loadIssues
-                }
-              />
+              <div className="issue-form-wrapper">
+
+                <CreateIssueModal
+                  repoId={id}
+                  onCreated={loadIssues}
+                />
+
+              </div>
 
             )}
 
