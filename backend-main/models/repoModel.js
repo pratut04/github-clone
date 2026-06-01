@@ -106,7 +106,6 @@ const RepositorySchema =
     name: {
       type: String,
       required: true,
-      unique: true,
     },
 
     description: {
@@ -164,6 +163,15 @@ const RepositorySchema =
     {
       timestamps: true,
     });
+RepositorySchema.index(
+  {
+    owner: 1,
+    name: 1
+  },
+  {
+    unique: true
+  }
+);
 
 module.exports =
   mongoose.models.Repository ||
