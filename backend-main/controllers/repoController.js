@@ -263,9 +263,26 @@ async function getAllRepositories(
         .populate("owner")
         .populate("issues");
 
-    res.json(
-      repositories
-    );
+    const reposWithForkCount =
+        await Promise.all(
+      
+          repositories.map(
+            async (repo) => {
+      
+              const forkCount =
+                await Repository.countDocuments({
+                  forkedFrom: repo._id
+                });
+      
+              return {
+                ...repo.toObject(),
+                forkCount
+              };
+            }
+          )
+        );
+      
+      res.json(reposWithForkCount);
 
   } catch (err) {
 
@@ -419,15 +436,43 @@ async function fetchRepositoriesForCurrentUser(
 
       });
 
-    return res.status(200)
-      .json({
+   const reposWithForkCount =
+  await Promise.all(
 
-        message:
-          "Repositories fetched successfully!",
+    repositories.map(
+      async (repo) => {
 
-        repositories:
-          repositories || [],
-      });
+        const forkCount =
+          await Repository.countDocuments({
+
+            forkedFrom:
+              repo._id
+
+          });
+
+        return {
+
+          ...repo.toObject(),
+
+          forkCount
+
+        };
+
+      }
+    )
+
+  );
+
+return res.status(200)
+  .json({
+
+    message:
+      "Repositories fetched successfully!",
+
+    repositories:
+      reposWithForkCount
+
+  });
 
   } catch (err) {
 
