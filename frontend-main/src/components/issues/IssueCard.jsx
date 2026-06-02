@@ -7,40 +7,56 @@ const IssueCard = ({
 }) => {
 
   return (
+
     <div className="issue-card">
 
-      <div className="issue-left">
+      <div className="issue-content">
 
-        <div className="issue-top">
-
-          <h3>
-            {issue.title}
-          </h3>
+        <div className="issue-header">
 
           <span
             className={
               issue.status === "open"
-                ? "issue-open"
-                : "issue-closed"
+                ? "issue-status-open"
+                : "issue-status-closed"
             }
           >
-
-            {issue.status}
-
+            ●
           </span>
+
+          <h3 className="issue-title">
+            {issue.title}
+          </h3>
 
         </div>
 
-        <p>
+        <p className="issue-description">
           {issue.description}
         </p>
+
+        <div className="issue-meta">
+
+          <span>
+            {issue.status}
+          </span>
+
+          <span>
+            •
+          </span>
+
+          <span>
+            {new Date(
+              issue.createdAt
+            ).toLocaleDateString()}
+          </span>
+
+        </div>
 
       </div>
 
       <div className="issue-actions">
 
-        {issue.status ===
-          "open" && (
+        {issue.status === "open" && (
 
           <button
             className="close-btn"
@@ -65,6 +81,7 @@ const IssueCard = ({
       </div>
 
     </div>
+
   );
 };
 
