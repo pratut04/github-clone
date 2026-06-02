@@ -35,7 +35,7 @@ const CommitHistory = () => {
 
         loadCommits();
 
-    }, [branch]);
+    }, []);
 
     const loadCommits =
         async () => {
