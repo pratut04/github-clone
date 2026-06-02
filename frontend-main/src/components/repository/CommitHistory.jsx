@@ -87,11 +87,11 @@ const CommitHistory = () => {
                                 className="commit-card"
 
                                 onClick={() =>
-                                    navigate(
-                                        `/repository/${id}/commit/${branch}/${commit._id}`
-                                    )
-                                }
-                            >
+                                navigate(
+                                            `/repository/${id}/commit/${commit.branchName}/${commit._id}`
+                                        )
+                                    }                          
+                                >
 
                                 <h3>
                                     {commit.message}
@@ -103,6 +103,10 @@ const CommitHistory = () => {
 
                                 <p>
                                     {commit.filePath}
+                                </p>
+
+                                <p>
+                                    Branch: {commit.branchName}
                                 </p>
 
                                 <small>
@@ -124,7 +128,7 @@ const CommitHistory = () => {
                                             await restoreCommit(
                                                 id,
                                                 commit._id,
-                                                branch
+                                                commit.branchName
                                             );
 
                                             alert(
