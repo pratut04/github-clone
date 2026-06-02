@@ -73,9 +73,13 @@ const CommitHistory = () => {
 
                 {
                     commits
-                        .slice()
-                        .reverse()
-                        .map((commit, index) => (
+                    .slice()
+                    .sort(
+                        (a, b) =>
+                            new Date(b.committedAt) -
+                            new Date(a.committedAt)
+                    )
+                    .map((commit, index) => (
 
                             <div
                                 key={index}
