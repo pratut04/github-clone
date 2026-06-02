@@ -1,12 +1,120 @@
+/* =========================
+   ISSUE FORM
+========================= */
+
+.issue-form {
+
+  width: 100%;
+
+  max-width: 820px;
+
+  margin: 30px auto;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 14px;
+
+  padding: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0,0,0,0.25);
+}
+
+.issue-form input,
+.issue-form textarea {
+
+  width: 100%;
+
+  background: #0d1117;
+
+  border: 1px solid #30363d;
+
+  border-radius: 8px;
+
+  padding: 14px 16px;
+
+  color: #f0f6fc;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.issue-form textarea {
+
+  min-height: 220px;
+
+  resize: vertical;
+
+  font-family: inherit;
+}
+
+.issue-form input:focus,
+.issue-form textarea:focus {
+
+  border-color: #2f81f7;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(47,129,247,0.2);
+}
+
+.issue-form button {
+
+  width: fit-content;
+
+  background: #238636;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 12px 22px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.issue-form button:hover {
+
+  background: #2ea043;
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ISSUE CARD
+========================= */
+
 .issue-card {
 
   background: #161b22;
 
   border: 1px solid #30363d;
 
-  border-radius: 16px;
+  border-radius: 12px;
 
-  padding: 24px;
+  padding: 20px 24px;
+
+  margin: 0 auto 16px auto;
+
+  max-width: 1200px;
 
   display: flex;
 
@@ -14,83 +122,110 @@
 
   align-items: center;
 
-  gap: 20px;
+  gap: 24px;
 
-  margin-bottom: 20px;
-
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .issue-card:hover {
 
   border-color: #58a6ff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0,0,0,0.25);
 }
 
-.issue-left {
+/* =========================
+   ISSUE CONTENT
+========================= */
+
+.issue-content {
 
   flex: 1;
 }
 
-.issue-top {
+.issue-header {
 
   display: flex;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 
   margin-bottom: 10px;
 }
 
-.issue-top h3 {
+.issue-title {
+
+  margin: 0;
+
+  color: #f0f6fc;
 
   font-size: 22px;
 
-  color: white;
+  font-weight: 600;
 }
 
-.issue-left p {
+.issue-description {
 
   color: #8b949e;
 
   line-height: 1.6;
+
+  margin: 0 0 14px;
 }
 
-.issue-open {
+.issue-meta {
 
-  background: #238636;
+  display: flex;
 
-  color: white;
+  align-items: center;
 
-  padding: 6px 12px;
+  gap: 10px;
 
-  border-radius: 30px;
+  color: #8b949e;
 
-  font-size: 12px;
-
-  font-weight: 600;
+  font-size: 14px;
 }
 
-.issue-closed {
+/* =========================
+   STATUS DOTS
+========================= */
 
-  background: #da3633;
+.issue-status-open {
 
-  color: white;
+  color: #3fb950;
 
-  padding: 6px 12px;
+  font-size: 18px;
 
-  border-radius: 30px;
-
-  font-size: 12px;
-
-  font-weight: 600;
+  font-weight: bold;
 }
+
+.issue-status-closed {
+
+  color: #f85149;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
 
 .issue-actions {
 
   display: flex;
 
   gap: 12px;
+
+  align-items: center;
+
+  flex-shrink: 0;
 }
 
 .close-btn {
@@ -101,9 +236,9 @@
 
   border: none;
 
-  padding: 10px 18px;
+  border-radius: 8px;
 
-  border-radius: 10px;
+  padding: 10px 18px;
 
   font-weight: 600;
 
@@ -125,9 +260,9 @@
 
   border: none;
 
-  padding: 10px 18px;
+  border-radius: 8px;
 
-  border-radius: 10px;
+  padding: 10px 18px;
 
   font-weight: 600;
 
@@ -139,98 +274,4 @@
 .delete-issue-btn:hover {
 
   background: #f85149;
-}
-
-.issue-form {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-
-    width: 100%;
-
-    max-width: 760px;
-
-    margin-top: 24px;
-
-    background: #161b22;
-
-    border: 1px solid #30363d;
-
-    border-radius: 12px;
-
-    padding: 24px;
-}
-
-.issue-form input,
-.issue-form textarea {
-
-    width: 100%;
-
-    background: #0d1117;
-
-    border: 1px solid #30363d;
-
-    border-radius: 8px;
-
-    padding: 14px 16px;
-
-    color: #f0f6fc;
-
-    font-size: 15px;
-
-    outline: none;
-
-    transition: 0.2s;
-}
-
-.issue-form textarea {
-
-    min-height: 180px;
-
-    resize: vertical;
-
-    font-family: inherit;
-}
-
-.issue-form input:focus,
-.issue-form textarea:focus {
-
-    border-color: #2f81f7;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(47,129,247,0.2);
-}
-
-.issue-form button {
-
-    width: fit-content;
-
-    padding: 12px 24px;
-
-    background: #238636;
-
-    border: none;
-
-    border-radius: 8px;
-
-    color: white;
-
-    font-weight: 600;
-
-    font-size: 14px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.issue-form button:hover {
-
-    background: #2ea043;
-
-    transform: translateY(-1px);
 }
